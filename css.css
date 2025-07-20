@@ -1,0 +1,187 @@
+/* 🎨 Variáveis de cores para fácil modificação */
+:root {
+  --cor-fundo: #87ceeb;
+  --cor-texto: #333;
+  --cor-header: #87ceeb;
+  --cor-footer: #b0c4de;
+  --cor-item: #ffffff;
+  --cor-item-checked: #c8e6c9;
+  --cor-item-hover: #e0e0e0;
+}
+
+/* 🌐 Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 🔝 Cabeçalho */
+#header {
+  background: var(--cor-header);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 🎯 Conteúdo principal */
+#main {
+  flex: 1;
+  padding: 20px;
+}
+
+#contador-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#lista-section .lista {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  background: var(--cor-item);
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.item.checked {
+  text-decoration: line-through;
+  background: var(--cor-item-checked);
+}
+
+.item:hover {
+  background: #c9f398;
+  cursor: pointer;
+}
+
+/* 📌 Botões */
+#botoes-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#botoes-section button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #c9f398;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 10px; /* espaço extra entre botões */
+}
+
+#botoes-section button:hover {
+  background-color: #d1f7a1;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 📌 Rodapé */
+#footer {
+  background: var(--cor-footer);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* 🔧 Responsividade para mobile */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  #header h1 {
+    font-size: 1.4em;
+  }
+
+  #main {
+    padding: 10px;
+  }
+
+  .item {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  #botoes-section button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #footer {
+    font-size: 0.8em;
+  }
+}
+/* Estilo para botão de editar */
+.editar-btn {
+  margin-left: 10px;
+  background-color: #ffa500; /* laranja */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.editar-btn:hover {
+  background-color: #ffb347; /* tom mais claro no hover */
+}
+/* Estilo para botão de editar */
+.editar-btn {
+  margin-left: 10px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.editar-btn:hover {
+  background-color: #ffb347;
+}
+
+/* Estilo para botão de deletar */
+.deletar-btn {
+  margin-left: 5px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.deletar-btn:hover {
+  background-color: #ff8080;
+}
+#lista-section h3 {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #444;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
+}
