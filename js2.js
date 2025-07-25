@@ -2,15 +2,11 @@ const categorias = {
   "Alimentos Básicos / Secos": [
     //ALIMENTOS BÁSICOS MUDAR AQUI:
 
-    "5 QUILOS DE AÇÚCAR",
-    "3 QUILOS DE FEIJÃO",
-    "2 LITROS DE ÓLEO",
-    "2 QUILOS DE TRIGO",
-    "1 PACOTE DE MANTEIGA",
-    "2 CAIXAS DE MELITA 103",
-    "1 PÃO SOVADO",
-    "1 MASSA DE TOMATE",
-    "1 POTE DE ALHO",
+    "ROYAL",
+    "1 COPO DE REQUEIJAO",
+    "250G DE MUSSARELA",
+    "250G DE APRESUNTADO",
+    "1OREGANO",
   ],
 
   "MISTURA DA SEMANA": [
@@ -19,27 +15,10 @@ const categorias = {
     "VARIADOS",
   ],
 
-  OUTROS: [
+  PADARIA: [
     //OUTROS MUDAR AQUI
-
-    "LAMPADAS RESERVAS",
-    "SABONETES BANHEIRO ROGERIO",
+    "1 KG DE CAFÉ",
   ],
-
-  Hortifruti: [
-    //HORTIFRUTI MUDAR AQUI:
-
-    "2 PÉS DE ALFACE",
-    "3 CENOURA",
-    "1 PACOTE DE CEBOLA",
-    "1 PACOTE DE REPOLHO",
-    "4 TOMATES",
-    "3 QUILOS DE BATATA",
-  ],
-  Pet:
-    //PET MUDAR AQUI:
-
-    ["1 PACOTE DE RAÇÃO"],
 };
 
 let produtosMarcados = JSON.parse(localStorage.getItem("itensMarcados")) || [];
