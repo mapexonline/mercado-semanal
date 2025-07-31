@@ -17,7 +17,7 @@ const categorias = {
 
   PADARIA: [
     //OUTROS MUDAR AQUI
-    "1 KG DE CAFÉ",
+    "3 caixas de leite",
   ],
 };
 
