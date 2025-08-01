@@ -1,24 +1,37 @@
 const categorias = {
-  "Alimentos Básicos / Secos": [
-    //ALIMENTOS BÁSICOS MUDAR AQUI:
-
-    "ROYAL",
-    "1 COPO DE REQUEIJAO",
-    "250G DE MUSSARELA",
-    "250G DE APRESUNTADO",
-    "1OREGANO",
-  ],
-
-  "MISTURA DA SEMANA": [
-    //MISTURA DA SEMANA MUDAR AQUI
-
-    "VARIADOS",
-  ],
+  "MISTURAS DA SEMANA": ["COXAS E SOBRECOXAS", "SALSICHAS", "LIGUIÇA"],
 
   PADARIA: [
-    //OUTROS MUDAR AQUI
-    "3 caixas de leite",
+    "5 KILOS DE AÇUCAR",
+    "1 KILO DE CAFÉ",
+    "1 POTE DE MARGARINA",
+    "3 CAIXAS DE LEITE",
   ],
+  "ALMOÇO OU JANTA": [
+    "2 PACOTES DE ARROZ",
+    "3 KILOS DE FEIJAO",
+    "1 KILO DE SAL",
+    "1 POTE DE ALHO",
+    "3 LITROS DE OLEO",
+    "2 KILOS DE MACARRAO AVE MARIA",
+    "1 KILO DE MACARRAO CUMPRIDO",
+    "1 MASSA DE TOMATE",
+    "3 SAZON BRANCO",
+    "1 SAZON AMARELO",
+  ],
+  HORTIFRUTI: [
+    "3 KILOS DE BATATA",
+    "4 CENOURAS",
+    "5 TOMATES",
+    "3 ABOBRINHAS",
+    "1 KILO DE CEBOLA",
+  ],
+
+  " VARIADOS": ["1 KILO DE FARINHA DE MILHO", "2 LEITES CONDENSADOS"],
+
+  "PRODUTOS DE LIMPEZAS": ["2 DETERGENTES", "PAPEL HIGIENICO", "SABONETES"],
+
+  OUTROS: ["GAS DE COZINHA", "RAÇÃO"],
 };
 
 let produtosMarcados = JSON.parse(localStorage.getItem("itensMarcados")) || [];
