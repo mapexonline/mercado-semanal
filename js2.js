@@ -34,6 +34,7 @@ const categorias = {
     "PAPEL HIGIENICO",
     "SABONETES",
     "ESCOVAS DE DENTE",
+    "CHINELO",
   ],
 
   OUTROS: ["GAS DE COZINHA", "RAÇÃO"],
