@@ -1,19 +1,24 @@
 const categorias = {
-  "MISTURAS DA SEMANA": ["1 FRANGO INTEIRO", "2 KG COSTELINHA DE PORCO"],
+  "MISTURAS DA SEMANA": ["SWFIT"],
 
-  PADARIA: [
-    "5 KILOS DE AÇUCAR",
-    "2 KILO DE CAFÉ",
-    "1 POTE DE MARGARINA",
-    "3 CAIXAS DE LEITE",
-  ],
+  PADARIA: ["REQUEIJAO", "3 LITROS DE LEITE"],
+
+  /*
   "ALMOÇO OU JANTA": [
     "3 KILOS DE FEIJAO",
     "1 POTE DE ALHO",
     "3 LITROS DE OLEO",
   ],
-  HORTIFRUTI: ["3 KILOS DE BATATA", "3 CENOURAS", "2 ABOBRINHAS", "1 REPOLHO"],
+  */
+  HORTIFRUTI: [
+    "3 KILOS DE BATATA",
+    "2 BERINGELAS",
+    "2 MASSAS DE TOMATE",
+    "1 KG DE CEBOLA",
+    "1 POTE DE ALHO",
+  ],
 
+  /*
   VARIADOS: ["SUCOS VARIADOS"],
 
   "PRODUTOS DE LIMPEZAS": [
@@ -22,8 +27,8 @@ const categorias = {
     "1 DESINFETANTE",
     "5 SABAO EM PEDRA",
   ],
-
-  OUTROS: ["PAPEL TOALHA", "PAPEL HIGIENICO"],
+*/
+  OUTROS: ["4 KG DE AÇUCAR", "PAPEL HIGIENICO"],
 };
 
 let produtosMarcados = JSON.parse(localStorage.getItem("itensMarcados")) || [];
