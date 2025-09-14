@@ -29,6 +29,7 @@ const categorias = {
   ],
 */
   OUTROS: ["4 KG DE AÇUCAR", "PAPEL HIGIENICO"],
+  VARIADOS: ["CREME DE BARBEAR", "SABONETES", "SHAMPOO E CONDICIONADOR"],
 };
 
 let produtosMarcados = JSON.parse(localStorage.getItem("itensMarcados")) || [];
