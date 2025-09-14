@@ -1,8 +1,9 @@
+// js2.js
+
+// Categorias iniciais (corrigido SWFIT -> SWIFT)
 const categorias = {
-  "MISTURAS DA SEMANA": ["SWFIT"],
-
+  "MISTURAS DA SEMANA": ["SWIFT"],
   PADARIA: ["REQUEIJAO", "3 LITROS DE LEITE"],
-
   /*
   "ALMOÇO OU JANTA": [
     "3 KILOS DE FEIJAO",
@@ -17,22 +18,23 @@ const categorias = {
     "1 KG DE CEBOLA",
     "1 POTE DE ALHO",
   ],
-
   /*
-  VARIADOS: ["SUCOS VARIADOS"],
-
+  "VARIADOS": ["SUCOS VARIADOS"],
   "PRODUTOS DE LIMPEZAS": [
     "1 PINHO SOL",
     "1 CANDIDA",
     "1 DESINFETANTE",
     "5 SABAO EM PEDRA",
   ],
-*/
+  */
   OUTROS: ["4 KG DE AÇUCAR", "PAPEL HIGIENICO"],
   VARIADOS: ["CREME DE BARBEAR", "SABONETES", "SHAMPOO E CONDICIONADOR"],
 };
 
-let produtosMarcados = JSON.parse(localStorage.getItem("itensMarcados")) || [];
+// Usa Set para evitar duplicados
+let produtosMarcados = new Set(
+  JSON.parse(localStorage.getItem("itensMarcados")) || []
+);
 
 function carregarLista() {
   const listaEl = document.getElementById("lista");
@@ -49,25 +51,24 @@ function carregarLista() {
     const ul = document.createElement("ul");
     ul.className = "lista";
 
-    const marcadosNaCategoria = [];
-    const naoMarcadosNaCategoria = [];
-
-    itens.forEach((item) => {
-      const key = `${categoria}-${item}`;
-      if (produtosMarcados.includes(key)) {
-        marcadosNaCategoria.push(item);
-        marcados++;
-      } else {
-        naoMarcadosNaCategoria.push(item);
-      }
-      total++;
+    // Ordena: não marcados primeiro
+    const ordenados = [...itens].sort((a, b) => {
+      const aMarc = produtosMarcados.has(`${categoria}-${a}`);
+      const bMarc = produtosMarcados.has(`${categoria}-${b}`);
+      if (aMarc !== bMarc) return aMarc ? 1 : -1;
+      return a.localeCompare(b, "pt-BR");
     });
 
-    [...naoMarcadosNaCategoria, ...marcadosNaCategoria].forEach((item) => {
+    ordenados.forEach((item) => {
+      total++;
       const key = `${categoria}-${item}`;
+
       const li = document.createElement("li");
       li.className = "item";
-      if (produtosMarcados.includes(key)) li.classList.add("checked");
+      if (produtosMarcados.has(key)) {
+        li.classList.add("checked");
+        marcados++;
+      }
 
       li.onclick = () => marcarItem(key);
 
@@ -86,12 +87,12 @@ function carregarLista() {
 }
 
 function marcarItem(key) {
-  if (produtosMarcados.includes(key)) {
-    produtosMarcados = produtosMarcados.filter((i) => i !== key);
+  if (produtosMarcados.has(key)) {
+    produtosMarcados.delete(key);
   } else {
-    produtosMarcados.push(key);
+    produtosMarcados.add(key);
   }
-  localStorage.setItem("itensMarcados", JSON.stringify(produtosMarcados));
+  localStorage.setItem("itensMarcados", JSON.stringify([...produtosMarcados]));
   carregarLista();
 }
 
@@ -102,8 +103,8 @@ function atualizarContador(faltam, total) {
 }
 
 function resetarLista() {
+  produtosMarcados.clear();
   localStorage.removeItem("itensMarcados");
-  produtosMarcados = [];
   carregarLista();
 }
 
@@ -114,12 +115,13 @@ function adicionarProduto() {
   const categoria = prompt("Digite a categoria (existente ou nova):");
   if (!categoria) return;
 
-  const nomeMaiusculo = nome.trim().toUpperCase();
-  const categoriaFormatada = categoria.trim();
+  const nomeItem = nome.trim().toUpperCase();
+  const categoriaFormatada = categoria.trim().toUpperCase();
 
   if (!categorias[categoriaFormatada]) categorias[categoriaFormatada] = [];
-  categorias[categoriaFormatada].push(nomeMaiusculo);
+  categorias[categoriaFormatada].push(nomeItem);
+
   carregarLista();
 }
 
-carregarLista();
+document.addEventListener("DOMContentLoaded", carregarLista);

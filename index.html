@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lista de Compras atualizada</title>
-  <link rel="stylesheet" href="css.css" />
-</head>
-<body>
-  <header id="header">
-    <h1>🛒MERCADO DA SEMANA</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Compras atualizada</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>🛒 MERCADO DA SEMANA</h1>
+    </header>
 
-  <main id="main">
-    <section id="contador-section">
-      <h2 id="contador"></h2>
-    </section>
+    <main id="main">
+      <section id="contador-section">
+        <h2 id="contador"></h2>
+      </section>
 
-    <section id="lista-section">
-      <ul class="lista" id="lista"></ul>
-    </section>
+      <section id="lista-section">
+        <!-- Agora é um contêiner genérico, pois o JS cria <h3> e <ul> aqui dentro -->
+        <div id="lista"></div>
+      </section>
 
-    <section id="botoes-section">
-  <button onclick="adicionarProduto()">➕ Adicionar Produto</button>
-  <button onclick="resetarLista()">🔄 Resetar Lista</button>
-</section>
+      <section id="botoes-section">
+        <button type="button" onclick="adicionarProduto()">
+          ➕ Adicionar Produto
+        </button>
+        <button type="button" onclick="resetarLista()">🔄 Resetar Lista</button>
+      </section>
+    </main>
 
+    <footer id="footer">
+      <p>mapexonline22@gmail.com</p>
+    </footer>
 
-
-
-  <footer id="footer">
-    <p>mapexonline22@gmail.com</p>
-  </footer>
-
-  <script src="js2.js"></script>
-</body>
+    <script src="js2.js" defer></script>
+  </body>
 </html>
