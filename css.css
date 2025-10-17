@@ -1,8 +1,8 @@
 /* 🎨 Variáveis de cores para fácil modificação */
 :root {
   --cor-fundo: #87ceeb;
-  --cor-texto: #333;
-  --cor-header: #87ceeb;
+  --cor-texto: #0c04f5;
+  --cor-header: #2fbcf3;
   --cor-footer: #b0c4de;
   --cor-item: #ffffff;
   --cor-item-checked: #c8e6c9;
@@ -67,21 +67,23 @@ body {
 }
 
 .item:hover {
-  background: #c9f398;
+  background: #098ccd;
   cursor: pointer;
+  color: #ffffff;
 }
 
 /* 📌 Botões */
 #botoes-section {
   margin-top: 20px;
   text-align: center;
+  padding: 2px;
 }
 
 #botoes-section button {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  background-color: #c9f398;
+  background-color: var(--cor-header);
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -90,7 +92,7 @@ body {
 }
 
 #botoes-section button:hover {
-  background-color: #d1f7a1;
+  background-color: #07c7f2;
   color: white;
   cursor: pointer;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
