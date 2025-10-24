@@ -1,19 +1,18 @@
 const categorias = {
   GERAL: [
 
-    "3KG DE AÇUCAR",
-    "1KG DE CAFE",
-    "10 PAEZINHOS",
-    "20 FATIAS DE MORTADELA",
-    "3 LITROS DE OLEO",
-    "1 POTE DE ALHO",
-    "2 KG DE FEIJAO",
-    "1 KG DE FEIJAO PRETO",
-    "1 KG DE CEBOLA",
-    "1 KG DE CAFE",
-    "1 CAIXA DE SABAO EM PO",
-    "DESINFETANTE",
-    "PAPEL HIGIENICO"
+    "5KG DE AÇUCAR",
+ "3KG DE BATATA",
+ "4 CENOURAS",
+ "3 PIMENTOES",
+ "2 ALFACE",
+ "5 TOMATE",
+ "3 ABOBRINHAS",
+ "2 BERINGELAS",
+ "1 MAÇO DE COUVE",
+ "3 CAIXAS DE LEITE",
+ "1 POTE DE MANTEIGA",
+ "ESPONJAS DE LOUÇA",
   ],
 };
 
